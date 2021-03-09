@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Welcome to KTSTA</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static '/landingPage/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="{% static '/landingPage/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static '/landingPage/vendor/simple-line-icons/css/simple-line-icons.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/fonts.css' %}" rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static '/landingPage/css/landing-page.min.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">KTSTA Booking System</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+           
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'about' %}">About Us</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+          </ul>
+          <a class="btn btn-primary" href="{% url 'login_page' %}">Sign In</a>
+          
+            <a class="nav-link" href="#">OR</a>
+          
+         <a class="btn btn-primary" href="{% url 'register' %}">Create Account!</a>
+          </div>
+    </nav>
+    {% block content %}
+
+
+    {% endblock%}
+
+    <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <ul class="list-inline mb-2">
+            <li class="list-inline-item">
+              <a href="{% url 'about' %}">About</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="{% url 'contact' %}">Contact</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Terms of Use</a>
+            </li>
+            <li class="list-inline-item">&sdot;</li>
+            <li class="list-inline-item">
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; YMBN 2020. All Rights Reserved.</p>
+        </div>
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-facebook fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="#">
+                <i class="fab fa-twitter-square fa-2x fa-fw"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="#">
+                <i class="fab fa-instagram fa-2x fa-fw"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{% static '/landingPage/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static '/landingPage/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+
+</html>
